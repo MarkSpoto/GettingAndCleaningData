@@ -1,20 +1,21 @@
 ## Getting and Cleaning data Peer Review
+## Operating System Information : Windows 7
+
 library(dplyr)
 library(reshape2)
 
 # setwd("D:\\coursera")
 
 ## Download data  (ms windows curl not used)
-zipfilename <- "wearabledata.zip"
-if (!file.exists("./data")){dir.create("./data")}
+zipfilename <- "./wearabledata.zip"
 if (!file.exists(zipfilename)){
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "
-  download.file(fileURL, zipfilename)
+  download.file(fileURL, zipfilename, mode = "wb")
 }
 
 ## Uncompress the file
 if (!file.exists("UCI HAR Dataset")) { 
-  unzip(filename) 
+  unzip(zipfilename) 
 }
 
 ## Load and Read the features data

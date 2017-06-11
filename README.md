@@ -3,6 +3,8 @@
 This is the course project for the Getting and Cleaning Data Coursera course.
 The R script, `run_analysis.R`, does the following:
 
+Operating System: Windows 7
+
 1. Download the dataset files on wearable computing 
 2. Loads the features and activities labels
 3. Filter the data keeping only data reflecting a mean or standard deviation
